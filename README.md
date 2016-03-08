@@ -8,6 +8,8 @@ I also start up `emacs` in daemon-mode.
 
 Now with `evil-mode`!
 
+![screenshot](https://cloud.githubusercontent.com/assets/6130766/13607375/78aaf1a4-e515-11e5-8c7e-e5cd3d4fd8d7.png)
+
 ## Usage
 
 Keybinding                  | Description
@@ -75,5 +77,5 @@ Then enable it:
 
 ## Note
 
-I use the [Essential PragmataPro](http://www.fsd.it/fonts/pragmatapro.htm) font. 
+I use Roboto Mono from [Powerline Fonts](https://github.com/powerline/fonts).
 
