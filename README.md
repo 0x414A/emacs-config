@@ -2,8 +2,6 @@
 
 This is a homegrown `emacs` config that I have more or less had for the past 2 years.
 
-Works best if your capslock is mapped to esc.
-
 I use [cask](https://github.com/cask/cask) to manage packages. 
 
 I also start up `emacs` in daemon-mode. 
@@ -12,17 +10,16 @@ Now with `evil-mode`!
 
 ## Usage
 
-<kbd>C-[</kbd> is how you get out of `insert` mode.
-
-<kbd>M-{h,j,k,l}</kbd> can be used to navigate between split panes.
-
-The `<leader>` key is <kbd>'</kbd>.
-
-<kbd><leader>n</kbd> invokes the `neotree` pane.
-<kbd><leader>b</kbd> brings up the buffer switching modeline thingy.
-<kbd><leader>k</kbd> kills a buffer.
-
-<kbd>M-t</kbd> brings up the fuzzy file switching thing provided by `fiplr`.
+Keybinding                  | Description
+----------------------------|----------------------------------------------------------------------
+<kbd>C-[</kbd>              | is how you get out of `insert` mode.
+<kbd>M-t</kbd>              | brings up the fuzzy file switching thing provided by `fiplr`.
+<kbd>M-{h,j,k,l}</kbd>      | can be used to navigate between split panes.
+<kbd>'</kbd>                | `<leader>` key
+<kbd><leader>n</kbd>        | invokes the `neotree` pane.
+<kbd><leader>b</kbd>        | brings up the buffer switching modeline thingy.
+<kbd><leader>k</kbd>        | kills a buffer.
+<kbd>C-x g</kbd>            | bring up the `magit` interface
 
 ## Installation
 
