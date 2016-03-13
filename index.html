@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="emacs-config : Here be my emacs config.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>emacs-config</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/0x414A/emacs-config">View on GitHub</a>
+
+          <h1 id="project_title">emacs-config</h1>
+          <h2 id="project_tagline">Here be my emacs config.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/0x414A/emacs-config/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/0x414A/emacs-config/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="emacs" class="anchor" href="#emacs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Emacs</h1>
+
+<p>This is a homegrown <code>emacs</code> config that I have more or less had for the past 2 years.</p>
+
+<p>I use <a href="https://github.com/cask/cask">cask</a> to manage packages. </p>
+
+<p>I also start up <code>emacs</code> in daemon-mode. </p>
+
+<p>Now with <code>evil-mode</code>!</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/6130766/13607375/78aaf1a4-e515-11e5-8c7e-e5cd3d4fd8d7.png" alt="screenshot"></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<table>
+<thead>
+<tr>
+<th>Keybinding</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>C-[</kbd></td>
+<td>is how you get out of <code>insert</code> mode.</td>
+</tr>
+<tr>
+<td><kbd>M-t</kbd></td>
+<td>brings up the fuzzy file switching thing provided by <code>fiplr</code>.</td>
+</tr>
+<tr>
+<td><kbd>M-{h,j,k,l}</kbd></td>
+<td>can be used to navigate between split panes.</td>
+</tr>
+<tr>
+<td><kbd>'</kbd></td>
+<td>
+<code>&lt;leader&gt;</code> key</td>
+</tr>
+<tr>
+<td><kbd>n</kbd></td>
+<td>invokes the <code>neotree</code> pane.</td>
+</tr>
+<tr>
+<td><kbd>b</kbd></td>
+<td>brings up the buffer switching modeline thingy.</td>
+</tr>
+<tr>
+<td><kbd>k</kbd></td>
+<td>kills a buffer.</td>
+</tr>
+<tr>
+<td><kbd>C-x g</kbd></td>
+<td>bring up the <code>magit</code> interface</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a id="on-os-x" class="anchor" href="#on-os-x" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On OS X</h3>
+
+<p>Install <code>cask</code> with <code>homebrew</code>:</p>
+
+<pre><code>brew install cask
+</code></pre>
+
+<p>Then create a symlink from the <code>brew</code>-installed <code>cask</code> directory containing <code>cask.el</code> to <code>~/.cask</code>:</p>
+
+<pre><code>ln -s /usr/local/cask/something/something ~/.cask
+</code></pre>
+
+<h3>
+<a id="on-arch-linux" class="anchor" href="#on-arch-linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On Arch Linux</h3>
+
+<p>Install <code>cask</code> from the <a href="https://aur.archlinux.org/packages/cask/">AUR</a>.</p>
+
+<p>Then create a symlink from the <code>brew</code>-installed <code>cask</code> directory containing <code>cask.el</code> to <code>~/.cask</code>:</p>
+
+<pre><code>ln -s /usr/share/cask ~/.cask
+</code></pre>
+
+<h3>
+<a id="general-installation" class="anchor" href="#general-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General Installation</h3>
+
+<p>Once that's done, use <code>stow</code> to create symlinks from <code>~/.dotfiles/emacs</code> to <code>~/.emacs.d</code>:</p>
+
+<pre><code>cd ~/.dotfiles &amp;&amp; stow emacs
+</code></pre>
+
+<p>Then install the packages specified in the <code>Cask</code> file:</p>
+
+<pre><code>cd ~/.emacs.d &amp;&amp; cask install
+</code></pre>
+
+<h2>
+<a id="installation-arch-linux" class="anchor" href="#installation-arch-linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation (Arch Linux)</h2>
+
+<p>Create <code>~/.config/systemd/user/emacs.service</code>:</p>
+
+<div class="highlight highlight-source-ini"><pre><span class="pl-en">[Unit]</span>
+<span class="pl-k">Description</span>=Emacs: the extensible, self-documenting text editor
+
+<span class="pl-en">[Service]</span>
+<span class="pl-k">Type</span>=forking
+<span class="pl-k">ExecStart</span>=/usr/bin/emacs --daemon
+<span class="pl-k">ExecStop</span>=/usr/bin/emacsclient --eval <span class="pl-s"><span class="pl-pds">"</span>(kill-emacs)<span class="pl-pds">"</span></span>
+<span class="pl-k">Restart</span>=always
+
+<span class="pl-en">[Install]</span>
+<span class="pl-k">WantedBy</span>=default.target</pre></div>
+
+<p>Then enable it:</p>
+
+<pre><code>systemctl --user enable emacs
+</code></pre>
+
+<h2>
+<a id="note" class="anchor" href="#note" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Note</h2>
+
+<p>I use Roboto Mono from <a href="https://github.com/powerline/fonts">Powerline Fonts</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">emacs-config maintained by <a href="https://github.com/0x414A">0x414A</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
