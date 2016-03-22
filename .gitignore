@@ -38,4 +38,7 @@ flycheck_*.el
 /server/
 
 # projectiles files
-.projectile
+.projectile.dat
+
+*.dat
+*.last
