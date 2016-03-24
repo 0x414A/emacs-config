@@ -31,6 +31,7 @@
 (depends-on "rspec-mode")
 (depends-on "rust-mode")
 (depends-on "scss-mode")
+(depends-on "seti-theme")
 (depends-on "smartparens")
 (depends-on "spacemacs-theme")
 (depends-on "spacegray-theme")

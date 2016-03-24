@@ -13,8 +13,8 @@
 (setq tab-width 2)
 
 ;; Set font
-(add-to-list 'default-frame-alist '(font . "Roboto Mono for Powerline-10"))
-(set-default-font "Roboto Mono for Powerline-10")
+(add-to-list 'default-frame-alist '(font . "Source Code Pro-14"))
+(set-default-font "Source Code Pro-14")
 
 ;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -24,8 +24,8 @@
     (add-hook 'after-make-frame-functions
         (lambda (frame)
             (select-frame frame)
-            (load-theme 'noctilux t)))
-    (load-theme 'noctilux t))
+            (load-theme 'seti t)))
+    (load-theme 'seti t))
 
 ;; Display Options
 (set-fringe-mode 5)
@@ -51,7 +51,7 @@
 (flyspell-mode 0)
 
 ;; Show line numbers and set format
-(global-linum-mode 1)
+(global-linum-mode 0)
 (setq linum-format "%4d  ")
 
 ;; Use command key as meta key (really only for GUI-mode)

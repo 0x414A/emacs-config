@@ -18,4 +18,4 @@
 ;; Settings - Extensions
 (load "extensions/deft.el")
 (load "extensions/org.el")
-(load "extensions/evil.el")
+;; (load "extensions/evil.el")
