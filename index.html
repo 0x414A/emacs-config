@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="emacs-config : Here be my emacs config.">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>emacs-config</title>
+    <meta charset="UTF-8">
+    <title>emacs-config by 0x414A</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">emacs-config</h1>
+      <h2 class="project-tagline">Here be my emacs config.</h2>
+      <a href="https://github.com/0x414A/emacs-config" class="btn">View on GitHub</a>
+      <a href="https://github.com/0x414A/emacs-config/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/0x414A/emacs-config/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/0x414A/emacs-config">View on GitHub</a>
-
-          <h1 id="project_title">emacs-config</h1>
-          <h2 id="project_tagline">Here be my emacs config.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/0x414A/emacs-config/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/0x414A/emacs-config/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="emacs" class="anchor" href="#emacs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Emacs</h1>
 
 <p>This is a homegrown <code>emacs</code> config that I have more or less had for the past 2 years.</p>
@@ -42,7 +30,7 @@
 
 <p>Now with <code>evil-mode</code>!</p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/6130766/13607375/78aaf1a4-e515-11e5-8c7e-e5cd3d4fd8d7.png" alt="screenshot"></p>
+<p><img src="https://cloud.githubusercontent.com/assets/13822200/14009318/8d04803a-f158-11e5-9700-60903108ae7a.png" alt="screenshot"></p>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
@@ -64,24 +52,28 @@
 <td>brings up the fuzzy file switching thing provided by <code>fiplr</code>.</td>
 </tr>
 <tr>
+<td>[⌘]+[t]</td>
+<td>(OS X) brings up the fuzzy file switching thing provided by <code>fiplr</code>.</td>
+</tr>
+<tr>
 <td><kbd>M-{h,j,k,l}</kbd></td>
 <td>can be used to navigate between split panes.</td>
 </tr>
 <tr>
-<td><kbd>'</kbd></td>
+<td><kbd>SPC</kbd></td>
 <td>
 <code>&lt;leader&gt;</code> key</td>
 </tr>
 <tr>
-<td><kbd>n</kbd></td>
+<td><kbd>SPC-n</kbd></td>
 <td>invokes the <code>neotree</code> pane.</td>
 </tr>
 <tr>
-<td><kbd>b</kbd></td>
+<td><kbd>SPC-b</kbd></td>
 <td>brings up the buffer switching modeline thingy.</td>
 </tr>
 <tr>
-<td><kbd>k</kbd></td>
+<td><kbd>SPC-k</kbd></td>
 <td>kills a buffer.</td>
 </tr>
 <tr>
@@ -91,8 +83,24 @@
 </tbody>
 </table>
 
+<p>And of course, the usual vim keybindings.</p>
+
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>First, install <a href="https://github.com/cask/cask">cask</a>. See <a href="#notes">Notes</a> for platform-specific notes.</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># Backup existing emacs directory</span>
+[-d <span class="pl-smi">$HOME</span>/.emacs.d ] <span class="pl-k">&amp;&amp;</span> mv <span class="pl-smi">$HOME</span>/.emacs.d{,.bak}
+
+<span class="pl-c"># Clone emacs-config</span>
+git clone https://github.com/0x414A/emacs-config.git <span class="pl-smi">$HOME</span>/.emacs.d
+
+<span class="pl-c"># Install casks</span>
+<span class="pl-c1">cd</span> <span class="pl-smi">$HOME</span>/.emacs.d <span class="pl-k">&amp;&amp;</span> cask install</pre></div>
+
+<h2>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes</h2>
 
 <h3>
 <a id="on-os-x" class="anchor" href="#on-os-x" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On OS X</h3>
@@ -104,8 +112,10 @@
 
 <p>Then create a symlink from the <code>brew</code>-installed <code>cask</code> directory containing <code>cask.el</code> to <code>~/.cask</code>:</p>
 
-<pre><code>ln -s /usr/local/cask/something/something ~/.cask
+<pre><code>ln -s /usr/local/Cellar/cask/*/ ~/.cask
 </code></pre>
+
+<p>Then navigate to </p>
 
 <h3>
 <a id="on-arch-linux" class="anchor" href="#on-arch-linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On Arch Linux</h3>
@@ -118,20 +128,7 @@
 </code></pre>
 
 <h3>
-<a id="general-installation" class="anchor" href="#general-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General Installation</h3>
-
-<p>Once that's done, use <code>stow</code> to create symlinks from <code>~/.dotfiles/emacs</code> to <code>~/.emacs.d</code>:</p>
-
-<pre><code>cd ~/.dotfiles &amp;&amp; stow emacs
-</code></pre>
-
-<p>Then install the packages specified in the <code>Cask</code> file:</p>
-
-<pre><code>cd ~/.emacs.d &amp;&amp; cask install
-</code></pre>
-
-<h2>
-<a id="installation-arch-linux" class="anchor" href="#installation-arch-linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation (Arch Linux)</h2>
+<a id="arch-linux-user-daemon" class="anchor" href="#arch-linux-user-daemon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Arch Linux user daemon</h3>
 
 <p>Create <code>~/.config/systemd/user/emacs.service</code>:</p>
 
@@ -156,18 +153,15 @@
 <a id="note" class="anchor" href="#note" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Note</h2>
 
 <p>I use Roboto Mono from <a href="https://github.com/powerline/fonts">Powerline Fonts</a>.</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">emacs-config maintained by <a href="https://github.com/0x414A">0x414A</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/0x414A/emacs-config">emacs-config</a> is maintained by <a href="https://github.com/0x414A">0x414A</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
