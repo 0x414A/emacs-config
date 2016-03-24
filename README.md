@@ -16,12 +16,15 @@ Keybinding                  | Description
 ----------------------------|----------------------------------------------------------------------
 <kbd>C-[</kbd>              | is how you get out of `insert` mode.
 <kbd>M-t</kbd>              | brings up the fuzzy file switching thing provided by `fiplr`.
+[⌘]+[t]                     | (OS X) brings up the fuzzy file switching thing provided by `fiplr`.
 <kbd>M-{h,j,k,l}</kbd>      | can be used to navigate between split panes.
 <kbd>SPC</kbd>              | `<leader>` key
-<kbd><leader>n</kbd>        | invokes the `neotree` pane.
-<kbd><leader>b</kbd>        | brings up the buffer switching modeline thingy.
-<kbd><leader>k</kbd>        | kills a buffer.
+<kbd>SPC-n</kbd>            | invokes the `neotree` pane.
+<kbd>SPC-b</kbd>            | brings up the buffer switching modeline thingy.
+<kbd>SPC-k</kbd>            | kills a buffer.
 <kbd>C-x g</kbd>            | bring up the `magit` interface
+
+And of course, the usual vim keybindings.
 
 ## Installation 
 
