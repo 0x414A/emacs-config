@@ -13,8 +13,8 @@
 (setq tab-width 2)
 
 ;; Set font
-(add-to-list 'default-frame-alist '(font . "Source Code Pro-14"))
-(set-default-font "Source Code Pro-14")
+(add-to-list 'default-frame-alist '(font . "Roboto Mono Light for Powerline-14"))
+(set-default-font "Roboto Mono Light for Powerline-14")
 
 ;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -24,11 +24,11 @@
     (add-hook 'after-make-frame-functions
         (lambda (frame)
             (select-frame frame)
-            (load-theme 'seti t)))
-    (load-theme 'seti t))
+            (load-theme 'glacier t)))
+    (load-theme 'glacier t))
 
 ;; Display Options
-(set-fringe-mode 5)
+(set-fringe-mode 0)
 (menu-bar-mode -1) ;; set to 1 for OS X
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
