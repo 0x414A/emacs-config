@@ -51,7 +51,7 @@
 (flyspell-mode 0)
 
 ;; Show line numbers and set format
-(global-linum-mode 0)
+(global-linum-mode 1)
 (setq linum-format "%4d  ")
 
 ;; Use command key as meta key (really only for GUI-mode)

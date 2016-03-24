@@ -36,7 +36,9 @@
 (depends-on "spacemacs-theme")
 (depends-on "spacegray-theme")
 (depends-on "spaceline")
+(depends-on "ujelly-theme")
 (depends-on "web")
 (depends-on "web-mode")
+(depends-on "yaml-mode")
 (depends-on "zenburn-theme")
 

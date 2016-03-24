@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
@@ -15,8 +22,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-	("d0521fca0fcad3adb1c4d8118798a0c9884c45de0961cf822c9962fe57491fe6" "2e2f2b9f9ec0782183f08b36123d7fdd1cfec117c7d700df57bfe97be678086c" "51e228ffd6c4fff9b5168b31d5927c27734e82ec61f414970fc6bcce23bc140d" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "d8f76414f8f2dcb045a37eb155bfaa2e1d17b6573ed43fb1d18b936febc7bbc2" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" default)))
- '(inhibit-startup-screen t))
+	("99953b61ecd4c3e414a177934e888ce9ee12782bbaf2125ec2385d5fd732cbc2" "d8f76414f8f2dcb045a37eb155bfaa2e1d17b6573ed43fb1d18b936febc7bbc2" "eed08a0a26717add8c52c30c90c489d8830c0a1eb6e8b92706065d61507b1fa3" default)))
+ '(package-selected-packages
+   (quote
+	(ujelly-theme zenburn-theme yaml-mode web-mode web spacemacs-theme spaceline spacegray-theme smartparens seti-theme scss-mode rust-mode rspec-mode robe rbenv python-mode pkgbuild-mode pallet noctilux-theme neotree monky markdown-mode magit lua-mode julia-mode js2-mode indent-guide haskell-mode flx-ido fiplr exec-path-from-shell evil-leader evil-escape enh-ruby-mode dockerfile-mode deft cython-mode coffee-mode base16-theme auto-complete ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

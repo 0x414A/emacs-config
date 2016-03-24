@@ -12,7 +12,7 @@
 
 (require 'neotree)
 
-(evil-leader/set-leader "'")
+(evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
  "b" 'switch-to-buffer
  "k" 'kill-buffer
@@ -29,3 +29,5 @@
 
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
+(setq powerline-default-separator 'arrow)
+(setq ns-use-srgb-colorspace nil)
