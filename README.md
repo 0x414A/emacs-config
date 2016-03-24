@@ -8,7 +8,7 @@ I also start up `emacs` in daemon-mode.
 
 Now with `evil-mode`!
 
-![screenshot](https://cloud.githubusercontent.com/assets/6130766/13607375/78aaf1a4-e515-11e5-8c7e-e5cd3d4fd8d7.png)
+![screenshot](https://cloud.githubusercontent.com/assets/13822200/14009318/8d04803a-f158-11e5-9700-60903108ae7a.png)
 
 ## Usage
 

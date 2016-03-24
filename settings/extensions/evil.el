@@ -30,4 +30,5 @@
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
 (setq powerline-default-separator 'arrow)
-(setq ns-use-srgb-colorspace nil)
+;; This is to correct spaceline coloring weirdness on OS X 
+(setq ns-use-srgb-colorspace nil) 
