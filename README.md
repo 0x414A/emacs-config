@@ -17,13 +17,28 @@ Keybinding                  | Description
 <kbd>C-[</kbd>              | is how you get out of `insert` mode.
 <kbd>M-t</kbd>              | brings up the fuzzy file switching thing provided by `fiplr`.
 <kbd>M-{h,j,k,l}</kbd>      | can be used to navigate between split panes.
-<kbd>'</kbd>                | `<leader>` key
+<kbd><SPC></kbd>            | `<leader>` key
 <kbd><leader>n</kbd>        | invokes the `neotree` pane.
 <kbd><leader>b</kbd>        | brings up the buffer switching modeline thingy.
 <kbd><leader>k</kbd>        | kills a buffer.
 <kbd>C-x g</kbd>            | bring up the `magit` interface
 
-## Installation
+## Installation 
+
+First, install [cask](https://github.com/cask/cask). See [Notes](#notes) for platform-specific notes.
+
+``` bash
+# Backup existing emacs directory
+[-d $HOME/.emacs.d ] && mv $HOME/.emacs.d{,.bak}
+
+# Clone emacs-config
+git clone https://github.com/0x414A/emacs-config.git $HOME/.emacs.d
+
+# Install casks
+cd $HOME/.emacs.d && cask install
+```
+
+## Notes 
 
 ### On OS X
 
@@ -33,7 +48,9 @@ Install `cask` with `homebrew`:
 
 Then create a symlink from the `brew`-installed `cask` directory containing `cask.el` to `~/.cask`:
 
-    ln -s /usr/local/cask/something/something ~/.cask
+	ln -s /usr/local/Cellar/cask/*/ ~/.cask
+	
+Then navigate to 
 
 ### On Arch Linux
 
@@ -43,17 +60,7 @@ Then create a symlink from the `brew`-installed `cask` directory containing `cas
 
     ln -s /usr/share/cask ~/.cask
 
-### General Installation
-
-Once that's done, use `stow` to create symlinks from `~/.dotfiles/emacs` to `~/.emacs.d`:
-
-	cd ~/.dotfiles && stow emacs
-
-Then install the packages specified in the `Cask` file:
-
-	cd ~/.emacs.d && cask install
-
-## Installation (Arch Linux)
+### Arch Linux user daemon 
 
 Create `~/.config/systemd/user/emacs.service`:
 
