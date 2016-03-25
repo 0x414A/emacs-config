@@ -1,5 +1,6 @@
 ;; Settings - General
 (load "gui.el")
+(load "window-management.el")
 (load "vcs.el")
 (load "search.el")
 

@@ -29,7 +29,7 @@
 
 ;; Display Options
 (set-fringe-mode 0)
-(menu-bar-mode -1) ;; set to 1 for OS X
+(menu-bar-mode 1) ;; set to 1 for OS X
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (global-visual-line-mode 1)
